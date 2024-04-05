@@ -1,0 +1,937 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <LangVersion>9.0</LangVersion>
+  </PropertyGroup>
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>10.0.20506</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <RootNamespace>RealtimeCSG</RootNamespace>
+    <ProjectGuid>{04790447-9BC1-0547-FF83-647D469AA66D}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <AssemblyName>RealtimeCSG</AssemblyName>
+    <TargetFrameworkVersion>v4.7.1</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <BaseDirectory>.</BaseDirectory>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>Temp\Bin\Debug\</OutputPath>
+    <DefineConstants>UNITY_2022_3_10;UNITY_2022_3;UNITY_2022;UNITY_5_3_OR_NEWER;UNITY_5_4_OR_NEWER;UNITY_5_5_OR_NEWER;UNITY_5_6_OR_NEWER;UNITY_2017_1_OR_NEWER;UNITY_2017_2_OR_NEWER;UNITY_2017_3_OR_NEWER;UNITY_2017_4_OR_NEWER;UNITY_2018_1_OR_NEWER;UNITY_2018_2_OR_NEWER;UNITY_2018_3_OR_NEWER;UNITY_2018_4_OR_NEWER;UNITY_2019_1_OR_NEWER;UNITY_2019_2_OR_NEWER;UNITY_2019_3_OR_NEWER;UNITY_2019_4_OR_NEWER;UNITY_2020_1_OR_NEWER;UNITY_2020_2_OR_NEWER;UNITY_2020_3_OR_NEWER;UNITY_2021_1_OR_NEWER;UNITY_2021_2_OR_NEWER;UNITY_2021_3_OR_NEWER;UNITY_2022_1_OR_NEWER;UNITY_2022_2_OR_NEWER;UNITY_2022_3_OR_NEWER;PLATFORM_ARCH_64;UNITY_64;UNITY_INCLUDE_TESTS;ENABLE_AR;ENABLE_AUDIO;ENABLE_CACHING;ENABLE_CLOTH;ENABLE_EVENT_QUEUE;ENABLE_MICROPHONE;ENABLE_MULTIPLE_DISPLAYS;ENABLE_PHYSICS;ENABLE_TEXTURE_STREAMING;ENABLE_VIRTUALTEXTURING;ENABLE_LZMA;ENABLE_UNITYEVENTS;ENABLE_VR;ENABLE_WEBCAM;ENABLE_UNITYWEBREQUEST;ENABLE_WWW;ENABLE_CLOUD_SERVICES;ENABLE_CLOUD_SERVICES_ADS;ENABLE_CLOUD_SERVICES_USE_WEBREQUEST;ENABLE_CLOUD_SERVICES_CRASH_REPORTING;ENABLE_CLOUD_SERVICES_PURCHASING;ENABLE_CLOUD_SERVICES_ANALYTICS;ENABLE_CLOUD_SERVICES_BUILD;ENABLE_EDITOR_GAME_SERVICES;ENABLE_UNITY_GAME_SERVICES_ANALYTICS_SUPPORT;ENABLE_CLOUD_LICENSE;ENABLE_EDITOR_HUB_LICENSE;ENABLE_WEBSOCKET_CLIENT;ENABLE_GENERATE_NATIVE_PLUGINS_FOR_ASSEMBLIES_API;ENABLE_DIRECTOR_AUDIO;ENABLE_DIRECTOR_TEXTURE;ENABLE_MANAGED_JOBS;ENABLE_MANAGED_TRANSFORM_JOBS;ENABLE_MANAGED_ANIMATION_JOBS;ENABLE_MANAGED_AUDIO_JOBS;ENABLE_MANAGED_UNITYTLS;INCLUDE_DYNAMIC_GI;ENABLE_SCRIPTING_GC_WBARRIERS;PLATFORM_SUPPORTS_MONO;RENDER_SOFTWARE_CURSOR;ENABLE_VIDEO;ENABLE_ACCELERATOR_CLIENT_DEBUGGING;ENABLE_NAVIGATION_PACKAGE_DEBUG_VISUALIZATION;ENABLE_NAVIGATION_HEIGHTMESH_RUNTIME_SUPPORT;ENABLE_NAVIGATION_UI_REQUIRES_PACKAGE;PLATFORM_STANDALONE;TEXTCORE_1_0_OR_NEWER;PLATFORM_STANDALONE_WIN;UNITY_STANDALONE_WIN;UNITY_STANDALONE;ENABLE_RUNTIME_GI;ENABLE_MOVIES;ENABLE_NETWORK;ENABLE_NVIDIA;ENABLE_CRUNCH_TEXTURE_COMPRESSION;ENABLE_OUT_OF_PROCESS_CRASH_HANDLER;ENABLE_CLUSTER_SYNC;ENABLE_CLUSTERINPUT;PLATFORM_UPDATES_TIME_OUTSIDE_OF_PLAYER_LOOP;GFXDEVICE_WAITFOREVENT_MESSAGEPUMP;PLATFORM_INITIALIZES_MEMORY_MANAGER_EXPLICITLY;ENABLE_MONO;NET_STANDARD_2_0;NET_STANDARD;NET_STANDARD_2_1;NETSTANDARD;NETSTANDARD2_1;ENABLE_PROFILER;DEBUG;TRACE;UNITY_ASSERTIONS;UNITY_EDITOR;UNITY_EDITOR_64;UNITY_EDITOR_WIN;ENABLE_UNITY_COLLECTIONS_CHECKS;ENABLE_BURST_AOT;UNITY_TEAM_LICENSE;ENABLE_CUSTOM_RENDER_TEXTURE;ENABLE_DIRECTOR;ENABLE_LOCALIZATION;ENABLE_SPRITES;ENABLE_TERRAIN;ENABLE_TILEMAP;ENABLE_TIMELINE;ENABLE_INPUT_SYSTEM;ENABLE_LEGACY_INPUT_MANAGER;TEXTCORE_FONT_ENGINE_1_5_OR_NEWER;RealtimeCSG;RealtimeCSG_1;RealtimeCSG_1_6;RealtimeCSG_1_6_01;CSHARP_7_OR_LATER;CSHARP_7_3_OR_NEWER</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <NoWarn>0169</NoWarn>
+    <AllowUnsafeBlocks>False</AllowUnsafeBlocks>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>Temp\bin\Release\</OutputPath>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <NoWarn>0169</NoWarn>
+    <AllowUnsafeBlocks>False</AllowUnsafeBlocks>
+  </PropertyGroup>
+  <PropertyGroup>
+    <NoConfig>true</NoConfig>
+    <NoStdLib>true</NoStdLib>
+    <AddAdditionalExplicitAssemblyReferences>false</AddAdditionalExplicitAssemblyReferences>
+    <ImplicitlyExpandNETStandardFacades>false</ImplicitlyExpandNETStandardFacades>
+    <ImplicitlyExpandDesignTimeFacades>false</ImplicitlyExpandDesignTimeFacades>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ProjectTypeGuids>{E097FAD1-6243-4DAD-9C02-E9B9EFC3FFC1};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <UnityProjectGenerator>Package</UnityProjectGenerator>
+    <UnityProjectGeneratorVersion>2.0.18</UnityProjectGeneratorVersion>
+    <UnityProjectType>Game:1</UnityProjectType>
+    <UnityBuildTarget>StandaloneWindows64:19</UnityBuildTarget>
+    <UnityVersion>2022.3.10f1</UnityVersion>
+  </PropertyGroup>
+  <ItemGroup>
+    <Analyzer Include="C:\Program Files\Microsoft Visual Studio\2022\Community\Common7\IDE\Extensions\Microsoft\Visual Studio Tools for Unity\Analyzers\Microsoft.Unity.Analyzers.dll" />
+    <Analyzer Include="D:\Unity\2022.3.10f1\Editor\Data\Tools\Unity.SourceGenerators\Unity.SourceGenerators.dll" />
+    <Analyzer Include="D:\Unity\2022.3.10f1\Editor\Data\Tools\Unity.SourceGenerators\Unity.Properties.SourceGenerator.dll" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Assets\Plugins\RealtimeCSG\Plugins\Editor\Scripts\View\GUI\EditModeGUI\EditModes\Generators\Outline2D.cs" />
+    <Compile Include="Assets\Plugins\RealtimeCSG\Plugins\Runtime\Scripts\Managers\CSGSceneManagerRedirector.cs" />
+    <Compile Include="Assets\Plugins\RealtimeCSG\Plugins\Editor\Scripts\View\GUI\EditModeGUI\EditModes\EditMode.Surface.GUI.cs" />
+    <Compile Include="Assets\Plugins\RealtimeCSG\Plugins\Editor\Scripts\View\Scene\Rendering\PointMeshRenderer.cs" />
+    <Compile Include="Assets\Plugins\RealtimeCSG\Plugins\Editor\Scripts\Control\Managers\MeshInstanceManager.cs" />
+    <Compile Include="Assets\Plugins\RealtimeCSG\Plugins\Runtime\Scripts\Components\Legacy\LegacyGeneratedMeshContainer.cs" />
+    <Compile Include="Assets\Plugins\RealtimeCSG\Plugins\Editor\Scripts\View\GUI\SceneViewBottomBarGUI\SurfaceVisibilityPopup.cs" />
+    <Compile Include="Assets\Plugins\RealtimeCSG\Plugins\Editor\Scripts\Control\Bindings\NativeMethods.cs" />
+    <Compile Include="Assets\Plugins\RealtimeCSG\Plugins\Editor\Scripts\Data\Hierarchy\HierarchyItemExtension.cs" />
+    <Compile Include="Assets\Plugins\RealtimeCSG\Plugins\Editor\Scripts\Control\Managers\UnityCompilerDefineManager.cs" />
+    <Compile Include="Assets\Plugins\RealtimeCSG\Plugins\Editor\Scripts\View\GUI\Utility\CSG_HandleUtility.cs" />
+    <Compile Include="Assets\Plugins\RealtimeCSG\Plugins\API\Components\Runtime\CSGNode.cs" />
+    <Compile Include="Assets\Plugins\RealtimeCSG\Plugins\Editor\Scripts\Control\Managers\InternalCSGModelManager.DefaultModel.cs" />
+    <Compile Include="Assets\Plugins\RealtimeCSG\Plugins\API\Foundation\Editor\BrushMesh.cs" />
+    <Compile Include="Assets\Plugins\RealtimeCSG\Plugins\Editor\Scripts\View\Scene\Rendering\LineMeshRenderer.cs" />
+    <Compile Include="Assets\Plugins\RealtimeCSG\Plugins\Editor\Scripts\Data\Settings\CSGSettings.cs" />
+    <Compile Include="Assets\Plugins\RealtimeCSG\Plugins\Editor\Scripts\Data\Settings\KeyEvent.cs" />
+    <Compile Include="Assets\Plugins\RealtimeCSG\Plugins\Editor\Scripts\View\Scene\Grid\GridUtility.cs" />
+    <Compile Include="Assets\Plugins\RealtimeCSG\Plugins\Editor\Scripts\View\Scene\Rendering\PolygonMeshRenderer.cs" />
+    <Compile Include="Assets\Plugins\RealtimeCSG\Plugins\Editor\Scripts\View\GUI\EditModeGUI\EditModes\Generators\Generator.Box.cs" />
+    <Compile Include="Assets\Plugins\RealtimeCSG\Plugins\Editor\Scripts\View\Scene\Handles\CSGDisc.cs" />
+    <Compile Include="Assets\Plugins\RealtimeCSG\Plugins\Editor\Scripts\Data\Generated\Icons\EmbeddedAssets.cs" />
+    <Compile Include="Assets\Plugins\RealtimeCSG\Plugins\Editor\Scripts\Control\Helpers\OperationsUtility.cs" />
+    <Compile Include="Assets\Plugins\RealtimeCSG\Plugins\Editor\Scripts\View\GUI\EditModeGUI\EditModeSelection.GUI.cs" />
+    <Compile Include="Assets\Plugins\RealtimeCSG\Plugins\API\Foundation\Editor\Native\CSGTreeNode.Native.cs" />
+    <Compile Include="Assets\Plugins\RealtimeCSG\Plugins\Editor\Scripts\View\GUI\SceneViewInfoGUI\SceneViewInfo.GUI.cs" />
+    <Compile Include="Assets\Plugins\RealtimeCSG\Plugins\Editor\Scripts\Control\Managers\UpdateLoop.cs" />
+    <Compile Include="Assets\Plugins\RealtimeCSG\Plugins\Editor\Scripts\View\GUI\EditModeGUI\EditModes\Generators\Generator.Cylinder.Settings.cs" />
+    <Compile Include="Assets\Plugins\RealtimeCSG\Plugins\Editor\Scripts\View\GUI\EditModeGUI\EditModes\Generators\Generator.LinearStairs.GUI.cs" />
+    <Compile Include="Assets\Plugins\RealtimeCSG\Plugins\Editor\Scripts\View\Scene\Handles\CSGFreeMove.cs" />
+    <Compile Include="Assets\Plugins\RealtimeCSG\Plugins\Editor\Scripts\Control\Managers\InternalCSGModelManager.Caches.cs" />
+    <Compile Include="Assets\Plugins\RealtimeCSG\Plugins\Editor\Thirdparty\UnityFBXExporter\FBXUnityMaterialGetter.cs" />
+    <Compile Include="Assets\Plugins\RealtimeCSG\Plugins\Editor\Scripts\Control\BrushUtility.cs" />
+    <Compile Include="Assets\Plugins\RealtimeCSG\Plugins\API\Components\Runtime\CSGBrush.cs" />
+    <Compile Include="Assets\Plugins\RealtimeCSG\Plugins\Editor\Scripts\View\Scene\Rendering\PaintUtility.cs" />
+    <Compile Include="Assets\Plugins\RealtimeCSG\Plugins\Editor\Scripts\View\Scene\Rendering\BrushOutlineManager.cs" />
+    <Compile Include="Assets\Plugins\RealtimeCSG\Plugins\Editor\Scripts\Control\Managers\InternalCSGModelManager.Registration.cs" />
+    <Compile Include="Assets\Plugins\RealtimeCSG\Plugins\Editor\Scripts\View\Scene\Handles\CSGSlider1D.cs" />
+    <Compile Include="Assets\Plugins\RealtimeCSG\Plugins\Editor\Scripts\View\GUI\EditModeGUI\EditModes\Generators\Generator.LinearStairs.GUIContents.cs" />
+    <Compile Include="Assets\Plugins\RealtimeCSG\Plugins\Editor\Scripts\View\Scene\SceneToolRenderer.cs" />
+    <Compile Include="Assets\Plugins\RealtimeCSG\Plugins\Runtime\Scripts\Components\Shape\MathConstants.cs" />
+    <Compile Include="Assets\Plugins\RealtimeCSG\Plugins\Editor\Scripts\View\GUI\SceneViewBottomBarGUI\SceneViewBottomBar.GUIContents.cs" />
+    <Compile Include="Assets\Plugins\RealtimeCSG\Plugins\API\Foundation\Runtime\SurfaceLayers.cs" />
+    <Compile Include="Assets\Plugins\RealtimeCSG\Plugins\Editor\Scripts\View\GUI\Utility\CSG_EditorGUIUtility.cs" />
+    <Compile Include="Assets\Plugins\RealtimeCSG\Plugins\Editor\Scripts\View\GUI\Utility\Tooltip.cs" />
+    <Compile Include="Assets\Plugins\RealtimeCSG\Plugins\Editor\Thirdparty\UnityFBXExporter\FBXExporter.cs" />
+    <Compile Include="Assets\Plugins\RealtimeCSG\Plugins\Editor\Scripts\Data\Settings\ColorSettings.cs" />
+    <Compile Include="Assets\Plugins\RealtimeCSG\Plugins\API\Legacy\Runtime\ControlMesh.cs" />
+    <Compile Include="Assets\Plugins\RealtimeCSG\Plugins\Runtime\Scripts\Components\CSGModelExported.cs" />
+    <Compile Include="Assets\Plugins\RealtimeCSG\Plugins\Editor\Scripts\Control\Helpers\GeometryUtility.cs" />
+    <Compile Include="Assets\Plugins\RealtimeCSG\Plugins\Editor\Scripts\View\GUI\SceneViewInfoGUI\SceneViewInfo.GUIContents.cs" />
+    <Compile Include="Assets\Plugins\RealtimeCSG\Plugins\Editor\Scripts\View\Units.cs" />
+    <Compile Include="Assets\Plugins\RealtimeCSG\Plugins\Editor\Scripts\Data\Selection\FilteredSelection.cs" />
+    <Compile Include="Assets\Plugins\RealtimeCSG\Plugins\Editor\Scripts\View\GUI\PreferenceWindows\CSGOptions.PreferenceWindow.cs" />
+    <Compile Include="Assets\Plugins\RealtimeCSG\Plugins\API\Foundation\Runtime\CSGOperationType.cs" />
+    <Compile Include="Assets\Plugins\RealtimeCSG\Plugins\Editor\Scripts\View\Scene\Rendering\BrushOutlineRenderer.cs" />
+    <Compile Include="Assets\Plugins\RealtimeCSG\Plugins\Editor\Scripts\View\GUI\HierarchyWindowItemGUI\HierarchyWindowItemGUI.cs" />
+    <Compile Include="Assets\Plugins\RealtimeCSG\Plugins\Editor\Scripts\View\GUI\EditModeGUI\EditModeToolWindow.SceneGUI.cs" />
+    <Compile Include="Assets\Plugins\RealtimeCSG\Plugins\Editor\Scripts\View\GUI\EditModeGUI\EditModes\Generators\Generator.LinearStairs.cs" />
+    <Compile Include="Assets\Plugins\RealtimeCSG\Plugins\Editor\Scripts\View\Scene\Handles\CSGFreeRotate.cs" />
+    <Compile Include="Assets\Plugins\RealtimeCSG\Plugins\API\Foundation\Runtime\MeshQuery.cs" />
+    <Compile Include="Assets\Plugins\RealtimeCSG\Plugins\API\Foundation\Editor\BrushValidation.cs" />
+    <Compile Include="Assets\Plugins\RealtimeCSG\Plugins\Editor\Scripts\View\Scene\Handles\CSGScaleSlider.cs" />
+    <Compile Include="Assets\Plugins\RealtimeCSG\Plugins\Editor\Scripts\Control\Helpers\ShapePolygonUtility.cs" />
+    <Compile Include="Assets\Plugins\RealtimeCSG\Plugins\Editor\Scripts\View\GUI\Utility\TooltipContentState.cs" />
+    <Compile Include="Assets\Plugins\RealtimeCSG\Plugins\Editor\Scripts\View\GUI\EditModeGUI\EditModes\EditMode.Generate.GUIContents.cs" />
+    <Compile Include="Assets\Plugins\RealtimeCSG\Plugins\Editor\Scripts\View\GUI\EditModeGUI\EditModes\Generators\Generator.Box.Settings.cs" />
+    <Compile Include="Assets\Plugins\RealtimeCSG\Plugins\API\Foundation\Runtime\VertexChannelFlags.cs" />
+    <Compile Include="Assets\Plugins\RealtimeCSG\Plugins\Editor\Scripts\View\GUI\EditModeGUI\EditModes\EditMode.Generate.GUI.cs" />
+    <Compile Include="Assets\Plugins\RealtimeCSG\Plugins\Editor\Scripts\View\GUI\EditModeGUI\EditModes\Generators\Generator.ExtrudedBase.cs" />
+    <Compile Include="Assets\Plugins\RealtimeCSG\Plugins\Editor\Scripts\Data\Selection\SelectBrushSurface.cs" />
+    <Compile Include="Assets\Plugins\RealtimeCSG\Plugins\API\Legacy\Runtime\TexGenFlags.cs" />
+    <Compile Include="Assets\Plugins\RealtimeCSG\Plugins\Editor\Scripts\View\GUI\PreferenceWindows\CSGKeys.PreferenceWindow.cs" />
+    <Compile Include="Assets\Plugins\RealtimeCSG\Plugins\API\Foundation\Runtime\GeneratedMeshContents.cs" />
+    <Compile Include="Assets\Plugins\RealtimeCSG\Plugins\API\Foundation\Editor\Native\BrushMeshInstance.Native.cs" />
+    <Compile Include="Assets\Plugins\RealtimeCSG\Plugins\Editor\Scripts\View\GUI\EditModeGUI\EditModes\Generators\Generator.Box.GUI.cs" />
+    <Compile Include="Assets\Plugins\RealtimeCSG\Plugins\Editor\Scripts\View\GUI\EditModeGUI\EditModes\Generators\Generator.Sphere.GUI.cs" />
+    <Compile Include="Assets\Plugins\RealtimeCSG\Plugins\Editor\Scripts\View\GUI\EditModeGUI\EditModes\EditMode.Place.cs" />
+    <Compile Include="Assets\Plugins\RealtimeCSG\Plugins\Editor\Scripts\View\GUI\EditModeGUI\EditModes\EditMode.Generate.cs" />
+    <Compile Include="Assets\Plugins\RealtimeCSG\Plugins\Editor\Scripts\View\GUI\Utility\CameraUtility.cs" />
+    <Compile Include="Assets\Plugins\RealtimeCSG\Plugins\Editor\Scripts\View\GUI\EditModeGUI\EditModes\Generators\Generator.SpiralStairs.GUIContents.cs" />
+    <Compile Include="Assets\Plugins\RealtimeCSG\Plugins\API\Foundation\Editor\CSGTree.cs" />
+    <Compile Include="Assets\Plugins\RealtimeCSG\Plugins\API\Foundation\Editor\CSGTreeBrush.cs" />
+    <Compile Include="Assets\Plugins\RealtimeCSG\Plugins\API\Foundation\Editor\CSGTreeNode.cs" />
+    <Compile Include="Assets\Plugins\RealtimeCSG\Plugins\Editor\Scripts\View\GUI\Utility\TooltipUtility.cs" />
+    <Compile Include="Assets\Plugins\RealtimeCSG\Plugins\Editor\Scripts\Data\Hierarchy\ParentNodeDataExtension.cs" />
+    <Compile Include="Assets\Plugins\RealtimeCSG\Plugins\API\Components\Runtime\Utility\GeometryWireframe.cs" />
+    <Compile Include="Assets\Plugins\RealtimeCSG\Plugins\Editor\Scripts\View\GUI\EditModeGUI\EditModes\Generators\Generator.Sphere.cs" />
+    <Compile Include="Assets\Plugins\RealtimeCSG\Plugins\API\Components\Runtime\Utility\CompareTransformation.cs" />
+    <Compile Include="Assets\Plugins\RealtimeCSG\Plugins\Editor\Scripts\View\GUI\EditModeGUI\EditModes\Generators\Generator.SpiralStairs.GUI.cs" />
+    <Compile Include="Assets\Plugins\RealtimeCSG\Plugins\Editor\Scripts\Control\Managers\UnityGridManager.cs" />
+    <Compile Include="Assets\Plugins\RealtimeCSG\Plugins\Editor\Scripts\View\GUI\EditModeGUI\EditModes\EditMode.Clip.GUIContents.cs" />
+    <Compile Include="Assets\Plugins\RealtimeCSG\Plugins\Editor\Scripts\View\GUI\EditModeGUI\EditModes\IEditMode.cs" />
+    <Compile Include="Assets\Plugins\RealtimeCSG\Plugins\Editor\Scripts\View\GUI\EditModeGUI\EditModes\Generators\Generator.SpiralStairs.cs" />
+    <Compile Include="Assets\Plugins\RealtimeCSG\Plugins\API\Legacy\Editor\BrushFactory.cs" />
+    <Compile Include="Assets\Plugins\RealtimeCSG\Plugins\API\Foundation\Editor\BrushMeshUtility.cs" />
+    <Compile Include="Assets\Plugins\RealtimeCSG\Plugins\Editor\Scripts\Data\Settings\CSGProjectSettings.cs" />
+    <Compile Include="Assets\Plugins\RealtimeCSG\Plugins\Editor\Scripts\Control\Managers\RectangleSelectionManager.cs" />
+    <Compile Include="Assets\Plugins\RealtimeCSG\Plugins\Editor\Scripts\Control\Managers\MeshInstanceManager.Export.cs" />
+    <Compile Include="Assets\Plugins\RealtimeCSG\Plugins\Editor\Scripts\View\GUI\EditModeGUI\EditModes\Generators\Generator.Cylinder.cs" />
+    <Compile Include="Assets\Plugins\RealtimeCSG\Plugins\Editor\Scripts\View\GUI\EditModeGUI\EditModes\EditMode.Clip.GUI.cs" />
+    <Compile Include="Assets\Plugins\RealtimeCSG\Plugins\Editor\Scripts\Control\Bindings\NativeMethodBindings.cs" />
+    <Compile Include="Assets\Plugins\RealtimeCSG\Plugins\API\Legacy\Runtime\Shape.cs" />
+    <Compile Include="Assets\Plugins\RealtimeCSG\Plugins\Editor\Scripts\Control\Managers\MeshInstanceManager.Build.cs" />
+    <Compile Include="Assets\Plugins\RealtimeCSG\Plugins\API\Components\Runtime\CSGOperation.cs" />
+    <Compile Include="Assets\Plugins\RealtimeCSG\Plugins\Editor\Scripts\Data\TypeConstants.cs" />
+    <Compile Include="Assets\Plugins\RealtimeCSG\Plugins\Editor\Scripts\Control\Managers\SceneViewEventHandler.cs" />
+    <Compile Include="Assets\Plugins\RealtimeCSG\Plugins\API\Components\Runtime\Utility\CompareShape.cs" />
+    <Compile Include="Assets\Plugins\RealtimeCSG\Plugins\Editor\Scripts\Control\BrushTraits.cs" />
+    <Compile Include="Assets\Plugins\RealtimeCSG\Plugins\Editor\Scripts\View\GUI\EditModeGUI\EditModes\Generators\IGenerator.cs" />
+    <Compile Include="Assets\Plugins\RealtimeCSG\Plugins\Editor\Scripts\View\GUI\EditModeGUI\EditModeSelection.GUIContents.cs" />
+    <Compile Include="Assets\Plugins\RealtimeCSG\Plugins\Editor\Scripts\Control\Helpers\MaterialUtility.cs" />
+    <Compile Include="Assets\Plugins\RealtimeCSG\Plugins\Editor\Thirdparty\UnityFBXExporter\Editor\ExporterMenu.cs" />
+    <Compile Include="Assets\Plugins\RealtimeCSG\Plugins\Editor\Scripts\Utility\PrefabUtility.cs" />
+    <Compile Include="Assets\Plugins\RealtimeCSG\Plugins\API\Foundation\Runtime\GeneratedMeshDescription.cs" />
+    <Compile Include="Assets\Plugins\RealtimeCSG\Plugins\Editor\Scripts\Control\Operations\TransformOperations.cs" />
+    <Compile Include="Assets\Plugins\RealtimeCSG\Plugins\API\Legacy\Runtime\TexGen.cs" />
+    <Compile Include="Assets\Plugins\RealtimeCSG\Plugins\Editor\Scripts\View\Scene\Handles\CSGSlider2D.cs" />
+    <Compile Include="Assets\Plugins\RealtimeCSG\Plugins\Editor\Scripts\Data\Selection\ControlMeshState.cs" />
+    <Compile Include="Assets\Plugins\RealtimeCSG\Plugins\Editor\Scripts\Data\SceneQuery\BoundsUtilities.cs" />
+    <Compile Include="Assets\Plugins\RealtimeCSG\Plugins\Editor\Scripts\Data\SnappedPoint.cs" />
+    <Compile Include="Assets\Plugins\RealtimeCSG\Plugins\Editor\Scripts\Control\Helpers\ShapeUtility.cs" />
+    <Compile Include="Assets\Plugins\RealtimeCSG\Plugins\API\Components\Runtime\Utility\ParentNodeData.cs" />
+    <Compile Include="Assets\Plugins\RealtimeCSG\Plugins\Editor\Scripts\Control\Managers\CSGModelManager.cs" />
+    <Compile Include="Assets\Plugins\RealtimeCSG\Plugins\Editor\Scripts\View\GUI\EditModeGUI\EditModes\EditMode.Place.GUI.cs" />
+    <Compile Include="Assets\Plugins\RealtimeCSG\Plugins\Editor\Scripts\Utility\Icon2EmbeddedAssetsUtility.cs" />
+    <Compile Include="Assets\Plugins\RealtimeCSG\Plugins\Editor\Scripts\Data\TexGenState.cs" />
+    <Compile Include="Assets\Plugins\RealtimeCSG\Plugins\Runtime\Scripts\Components\GeneratedMeshInstance.cs" />
+    <Compile Include="Assets\Plugins\RealtimeCSG\Plugins\Editor\Scripts\View\DragAndDrop\SceneDragToolManager.cs" />
+    <Compile Include="Assets\Plugins\RealtimeCSG\Plugins\Editor\Scripts\View\Scene\Handles\CSGHandles.cs" />
+    <Compile Include="Assets\Plugins\RealtimeCSG\Plugins\Editor\Scripts\Data\SceneQuery\AABB.cs" />
+    <Compile Include="Assets\Plugins\RealtimeCSG\Plugins\API\Components\Runtime\CSGModel.cs" />
+    <Compile Include="Assets\Plugins\RealtimeCSG\Plugins\API\Foundation\Editor\BrushMeshInstance.cs" />
+    <Compile Include="Assets\Plugins\RealtimeCSG\Plugins\Editor\Scripts\Utility\VisibilityUtility.cs" />
+    <Compile Include="Assets\Plugins\RealtimeCSG\Plugins\Editor\Scripts\Control\Operations\BrushOperations.cs" />
+    <Compile Include="Assets\Plugins\RealtimeCSG\Plugins\Editor\Scripts\View\Scene\Rendering\CSGRenderer.cs" />
+    <Compile Include="Assets\Plugins\RealtimeCSG\Plugins\Editor\Scripts\View\GUI\ComponentEditorWindows\CSGModelComponent.Inspector.GUI.cs" />
+    <Compile Include="Assets\Plugins\RealtimeCSG\Plugins\Editor\Scripts\View\GUI\PropertyDrawers\EnumAsFlags.PropertyDrawer.cs" />
+    <Compile Include="Assets\Plugins\RealtimeCSG\Plugins\Editor\Scripts\View\GUI\EditModeGUI\EditModes\EditMode.Place.GUIContents.cs" />
+    <Compile Include="Assets\Plugins\RealtimeCSG\Plugins\Runtime\Scripts\Components\InternalFlags.cs" />
+    <Compile Include="Assets\Plugins\RealtimeCSG\Plugins\Editor\Scripts\View\GUI\EditModeGUI\EditModes\Generators\Generator.FreeDraw.cs" />
+    <Compile Include="Assets\Plugins\RealtimeCSG\Plugins\API\Foundation\Editor\Native\CSGTreeBrush.Native.cs" />
+    <Compile Include="Assets\Plugins\RealtimeCSG\Plugins\Editor\Scripts\View\GUI\EditModeGUI\EditModeToolWindow.Editor.cs" />
+    <Compile Include="Assets\Plugins\RealtimeCSG\Plugins\Editor\Scripts\View\GUI\EditModeGUI\EditModes\EditMode.Surface.cs" />
+    <Compile Include="Assets\Plugins\RealtimeCSG\Plugins\Editor\Scripts\View\GUI\EditModeGUI\EditModes\Generators\Generator.FreeDraw.GUIContents.cs" />
+    <Compile Include="Assets\Plugins\RealtimeCSG\Plugins\Editor\Scripts\View\Scene\Grid\CSGGrid.cs" />
+    <Compile Include="Assets\Plugins\RealtimeCSG\Plugins\Editor\Scripts\View\Scene\Utility\CursorUtility.cs" />
+    <Compile Include="Assets\Plugins\RealtimeCSG\Plugins\Editor\Scripts\Control\Managers\CSGSceneManagerInstance.cs" />
+    <Compile Include="Assets\Plugins\RealtimeCSG\Plugins\Editor\Thirdparty\UnityFBXExporter\FBXMeshToString.cs" />
+    <Compile Include="Assets\Plugins\RealtimeCSG\Plugins\Editor\Thirdparty\UnityFBXExporter\FBXModelPostProcessor.cs" />
+    <Compile Include="Assets\Plugins\RealtimeCSG\Plugins\API\Legacy\Runtime\CSGPlane.cs" />
+    <Compile Include="Assets\Plugins\RealtimeCSG\Plugins\Editor\Scripts\View\Scene\Handles\CSGBounds.cs" />
+    <Compile Include="Assets\Plugins\RealtimeCSG\Plugins\Editor\Scripts\View\DragAndDrop\SceneDragTool.Meshes.cs" />
+    <Compile Include="Assets\Plugins\RealtimeCSG\Plugins\Editor\Scripts\Data\Selection\ControlMeshState.Selection.cs" />
+    <Compile Include="Assets\Plugins\RealtimeCSG\Plugins\Editor\Scripts\Control\Operations\ControlMeshOperations.cs" />
+    <Compile Include="Assets\Plugins\RealtimeCSG\Plugins\API\Legacy\Runtime\Surface.cs" />
+    <Compile Include="Assets\Plugins\RealtimeCSG\Plugins\Editor\Scripts\View\GUI\EditModeGUI\EditModes\Generators\Generator.Base.cs" />
+    <Compile Include="Assets\Plugins\RealtimeCSG\Plugins\Editor\Scripts\Data\Selection\SelectionUtility.cs" />
+    <Compile Include="Assets\Plugins\RealtimeCSG\Plugins\Editor\Scripts\View\GUI\EditModeGUI\EditModes\Generators\IShapeSettings.cs" />
+    <Compile Include="Assets\Plugins\RealtimeCSG\Plugins\Editor\Scripts\View\GUI\EditModeGUI\EditModes\EditMode.Common.GUI.cs" />
+    <Compile Include="Assets\Plugins\RealtimeCSG\Plugins\Editor\Scripts\View\GUI\SceneViewBottomBarGUI\SceneViewBottomBar.GUI.cs" />
+    <Compile Include="Assets\Plugins\RealtimeCSG\Plugins\Editor\Scripts\Data\SceneQuery\SceneQueryUtility.cs" />
+    <Compile Include="Assets\Plugins\RealtimeCSG\Plugins\Editor\Scripts\View\GUI\EditModeGUI\EditModes\EditMode.Edit.GUI.cs" />
+    <Compile Include="Assets\Plugins\RealtimeCSG\Plugins\Editor\Scripts\Control\Managers\InternalCSGModelManager.Hierarchy.cs" />
+    <Compile Include="Assets\Plugins\RealtimeCSG\Plugins\Editor\Scripts\Control\Managers\InternalCSGModelManager.Lifetime.cs" />
+    <Compile Include="Assets\Plugins\RealtimeCSG\Plugins\Editor\Scripts\View\GUI\EditModeGUI\EditModes\EditMode.Edit.cs" />
+    <Compile Include="Assets\Plugins\RealtimeCSG\Plugins\Editor\Scripts\Control\UndoGroup.cs" />
+    <Compile Include="Assets\Plugins\RealtimeCSG\Plugins\Editor\Scripts\Data\GUIConstants.cs" />
+    <Compile Include="Assets\Plugins\RealtimeCSG\Plugins\Editor\Scripts\View\DragAndDrop\ISceneDragTool.cs" />
+    <Compile Include="Assets\Plugins\RealtimeCSG\Plugins\API\Foundation\Editor\CSGTreeBranch.cs" />
+    <Compile Include="Assets\Plugins\RealtimeCSG\Plugins\Editor\Scripts\View\GUI\EditModeGUI\EditModes\Generators\Generator.Sphere.Settings.cs" />
+    <Compile Include="Assets\Plugins\RealtimeCSG\Plugins\Editor\Scripts\View\GUI\EditModeGUI\EditModes\Generators\Generator.LinearStairs.Settings.cs" />
+    <Compile Include="Assets\Plugins\RealtimeCSG\Plugins\Editor\Scripts\View\GUI\EditModeGUI\EditModes\Generators\Generator.Cylinder.GUI.cs" />
+    <Compile Include="Assets\Plugins\RealtimeCSG\Plugins\Editor\Scripts\Data\Selection\BrushSelection.cs" />
+    <Compile Include="Assets\Plugins\RealtimeCSG\Plugins\Editor\Scripts\View\GUI\EditModeGUI\EditModes\Generators\Generator.Sphere.GUIContents.cs" />
+    <Compile Include="Assets\Plugins\RealtimeCSG\Plugins\Editor\Scripts\Control\Helpers\ModelTraits.cs" />
+    <Compile Include="Assets\Plugins\RealtimeCSG\Plugins\Editor\Scripts\View\Scene\Rendering\RotationCircle.cs" />
+    <Compile Include="Assets\Plugins\RealtimeCSG\Plugins\Editor\Scripts\View\DragAndDrop\SceneDragTool.BrushDragOnSurface.cs" />
+    <Compile Include="Assets\Plugins\RealtimeCSG\Plugins\Editor\Scripts\View\GUI\EditorWindow\Debug.HierarchyWindow.cs" />
+    <Compile Include="Assets\Plugins\RealtimeCSG\Plugins\Editor\Thirdparty\UnityFBXExporter\FBXUnityMeshGetter.cs" />
+    <Compile Include="Assets\Plugins\RealtimeCSG\Plugins\API\Foundation\Editor\Native\CSGManager.Native.cs" />
+    <Compile Include="Assets\Plugins\RealtimeCSG\Plugins\Editor\Scripts\View\GUI\EditModeGUI\EditModes\Generators\Generator.Box.GUIContents.cs" />
+    <Compile Include="Assets\Plugins\RealtimeCSG\Plugins\Editor\Scripts\View\GUI\EditModeGUI\EditModes\Generators\Generator.Cylinder.GUIContents.cs" />
+    <Compile Include="Assets\Plugins\RealtimeCSG\Plugins\API\Components\Runtime\Utility\HierarchyItem.cs" />
+    <Compile Include="Assets\Plugins\RealtimeCSG\Plugins\Runtime\Scripts\Attributes\EnumAsFlagsAttribute.cs" />
+    <Compile Include="Assets\Plugins\RealtimeCSG\Plugins\Editor\Scripts\Data\SceneQuery\BrushIntersection.cs" />
+    <Compile Include="Assets\Plugins\RealtimeCSG\Plugins\Editor\Scripts\View\GUI\Utility\CSG_GUIStyleUtility.cs" />
+    <Compile Include="Assets\Plugins\RealtimeCSG\Plugins\Editor\Scripts\View\GUI\EditModeGUI\EditModes\EditMode.Edit.GUIContents.cs" />
+    <Compile Include="Assets\Plugins\RealtimeCSG\Plugins\Editor\Scripts\Data\Settings\Keys.cs" />
+    <Compile Include="Assets\Plugins\RealtimeCSG\Plugins\Editor\Scripts\View\GUI\EditModeGUI\EditModes\EditMode.Clip.cs" />
+    <Compile Include="Assets\Plugins\RealtimeCSG\Plugins\API\Foundation\Editor\Version.cs" />
+    <Compile Include="Assets\Plugins\RealtimeCSG\Plugins\Editor\Scripts\Data\Selection\TransformSelection.cs" />
+    <Compile Include="Assets\Plugins\RealtimeCSG\Plugins\Editor\Scripts\View\GUI\ComponentEditorWindows\CSGModelComponent.Inspector.GUIContents.cs" />
+    <Compile Include="Assets\Plugins\RealtimeCSG\Plugins\Editor\Scripts\View\GUI\EditModeGUI\EditModes\EditMode.Surface.GUIContents.cs" />
+    <Compile Include="Assets\Plugins\RealtimeCSG\Plugins\Editor\Scripts\View\GUI\ComponentEditorWindows\ExportedModelComponent.Editor.cs" />
+    <Compile Include="Assets\Plugins\RealtimeCSG\Plugins\API\Components\Runtime\Utility\ChildNodeData.cs" />
+    <Compile Include="Assets\Plugins\RealtimeCSG\Plugins\Runtime\Scripts\Components\GeneratedMeshes.cs" />
+    <Compile Include="Assets\Plugins\RealtimeCSG\Plugins\Editor\Scripts\View\GUI\EditModeGUI\EditModes\Generators\Generator.FreeDraw.GUI.cs" />
+    <Compile Include="Assets\Plugins\RealtimeCSG\Plugins\API\Foundation\Editor\Native\CSGTree.Native.cs" />
+    <Compile Include="Assets\Plugins\RealtimeCSG\Plugins\API\Legacy\Editor\BrushFactory.Legacy.cs" />
+    <Compile Include="Assets\Plugins\RealtimeCSG\Plugins\Runtime\Scripts\Managers\CSGSceneManagerInterface.cs" />
+    <Compile Include="Assets\Plugins\RealtimeCSG\Plugins\Editor\Scripts\View\GUI\EditModeGUI\EditModeManager.cs" />
+    <Compile Include="Assets\Plugins\RealtimeCSG\Plugins\Editor\Scripts\Control\Attributes\CSGModelModifiedEventAttribute.cs" />
+    <Compile Include="Assets\Plugins\RealtimeCSG\Plugins\API\Components\Runtime\Utility\ComponentUpgrader.cs" />
+    <Compile Include="Assets\Plugins\RealtimeCSG\Plugins\Runtime\Scripts\Utility\MeshUtility.cs" />
+    <Compile Include="Assets\Plugins\RealtimeCSG\Plugins\API\Foundation\Editor\CSGManager.cs" />
+    <Compile Include="Assets\Plugins\RealtimeCSG\Plugins\API\Foundation\Editor\Native\CSGTreeBranch.Native.cs" />
+    <Compile Include="Assets\Plugins\RealtimeCSG\Plugins\Editor\Scripts\Control\Helpers\ControlMeshUtility.cs" />
+    <Compile Include="Assets\Plugins\RealtimeCSG\Plugins\Editor\Scripts\View\GUI\EditModeGUI\EditModes\Generators\Generator.SpiralStairs.Settings.cs" />
+    <Compile Include="Assets\Plugins\RealtimeCSG\Plugins\Editor\Scripts\Control\Helpers\SurfaceUtility.cs" />
+    <Compile Include="Assets\Plugins\RealtimeCSG\Plugins\Editor\Scripts\View\GUI\EditModeGUI\EditModes\Generators\CylinderDefinition.cs" />
+    <Compile Include="Assets\Plugins\RealtimeCSG\Plugins\Editor\Scripts\View\DragAndDrop\SceneDragTool.Materials.cs" />
+    <Compile Include="Assets\Plugins\RealtimeCSG\Plugins\Editor\Scripts\View\GUI\ComponentEditorWindows\GeneratedMeshesComponent.Editor.cs" />
+    <Compile Include="Assets\Plugins\RealtimeCSG\Plugins\Editor\Scripts\Control\Managers\InternalCSGModelManager.UpdateMeshes.cs" />
+    <Compile Include="Assets\Plugins\RealtimeCSG\Plugins\Editor\Scripts\View\GUI\EditModeGUI\EditModes\EditMode.Common.GUIContents.cs" />
+    <Compile Include="Assets\Plugins\RealtimeCSG\Plugins\Runtime\Scripts\Utility\GameObjectExtensions.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Assets\Plugins\RealtimeCSG\Plugins\Editor\Resources\Shaders\zTestGenericLine.shader" />
+    <None Include="Assets\Plugins\RealtimeCSG\Plugins\Editor\Resources\Shaders\customSurface.shader" />
+    <None Include="Assets\Plugins\RealtimeCSG\Plugins\Editor\Resources\Shaders\grid.shader" />
+    <None Include="Assets\Plugins\RealtimeCSG\Plugins\Editor\Resources\Shaders\customDot.shader" />
+    <None Include="Assets\Plugins\RealtimeCSG\Plugins\Editor\Resources\Shaders\genericLine.shader" />
+    <None Include="Assets\Plugins\RealtimeCSG\RealtimeCSG.asmdef" />
+    <None Include="Assets\Plugins\RealtimeCSG\Plugins\Editor\Resources\Shaders\transparentSpecialSurface.shader" />
+    <None Include="Assets\Plugins\RealtimeCSG\Plugins\Editor\Resources\Shaders\customWire.shader" />
+    <None Include="Assets\Plugins\RealtimeCSG\Plugins\Editor\External\x64\RealtimeCSG[1_559].dll" />
+    <None Include="Assets\Plugins\RealtimeCSG\Plugins\Editor\Resources\Shaders\background.shader" />
+    <None Include="Assets\Plugins\RealtimeCSG\Plugins\Editor\Resources\Shaders\customWireDotted.shader" />
+    <None Include="Assets\Plugins\RealtimeCSG\Plugins\Editor\Resources\Shaders\specialSurface.shader" />
+    <None Include="Assets\Plugins\RealtimeCSG\Plugins\Editor\Resources\Shaders\customThickWire.shader" />
+    <None Include="Assets\Plugins\RealtimeCSG\Plugins\Editor\Resources\Shaders\customNoDepthSurface.shader" />
+    <None Include="Assets\Plugins\RealtimeCSG\Plugins\Editor\Resources\Shaders\orthogrid.shader" />
+    <None Include="Assets\Plugins\RealtimeCSG\Plugins\Editor\Resources\Shaders\noZTestGenericLine.shader" />
+    <None Include="Assets\Plugins\RealtimeCSG\Plugins\Editor\Resources\Shaders\coloredPolygon.shader" />
+  </ItemGroup>
+  <ItemGroup>
+    <Reference Include="UnityEngine">
+      <HintPath>D:\Unity\2022.3.10f1\Editor\Data\Managed\UnityEngine\UnityEngine.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.AIModule">
+      <HintPath>D:\Unity\2022.3.10f1\Editor\Data\Managed\UnityEngine\UnityEngine.AIModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.ARModule">
+      <HintPath>D:\Unity\2022.3.10f1\Editor\Data\Managed\UnityEngine\UnityEngine.ARModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.AccessibilityModule">
+      <HintPath>D:\Unity\2022.3.10f1\Editor\Data\Managed\UnityEngine\UnityEngine.AccessibilityModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.AndroidJNIModule">
+      <HintPath>D:\Unity\2022.3.10f1\Editor\Data\Managed\UnityEngine\UnityEngine.AndroidJNIModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.AnimationModule">
+      <HintPath>D:\Unity\2022.3.10f1\Editor\Data\Managed\UnityEngine\UnityEngine.AnimationModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.AssetBundleModule">
+      <HintPath>D:\Unity\2022.3.10f1\Editor\Data\Managed\UnityEngine\UnityEngine.AssetBundleModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.AudioModule">
+      <HintPath>D:\Unity\2022.3.10f1\Editor\Data\Managed\UnityEngine\UnityEngine.AudioModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.ClothModule">
+      <HintPath>D:\Unity\2022.3.10f1\Editor\Data\Managed\UnityEngine\UnityEngine.ClothModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.ClusterInputModule">
+      <HintPath>D:\Unity\2022.3.10f1\Editor\Data\Managed\UnityEngine\UnityEngine.ClusterInputModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.ClusterRendererModule">
+      <HintPath>D:\Unity\2022.3.10f1\Editor\Data\Managed\UnityEngine\UnityEngine.ClusterRendererModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.ContentLoadModule">
+      <HintPath>D:\Unity\2022.3.10f1\Editor\Data\Managed\UnityEngine\UnityEngine.ContentLoadModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.CoreModule">
+      <HintPath>D:\Unity\2022.3.10f1\Editor\Data\Managed\UnityEngine\UnityEngine.CoreModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.CrashReportingModule">
+      <HintPath>D:\Unity\2022.3.10f1\Editor\Data\Managed\UnityEngine\UnityEngine.CrashReportingModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.DSPGraphModule">
+      <HintPath>D:\Unity\2022.3.10f1\Editor\Data\Managed\UnityEngine\UnityEngine.DSPGraphModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.DirectorModule">
+      <HintPath>D:\Unity\2022.3.10f1\Editor\Data\Managed\UnityEngine\UnityEngine.DirectorModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.GIModule">
+      <HintPath>D:\Unity\2022.3.10f1\Editor\Data\Managed\UnityEngine\UnityEngine.GIModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.GameCenterModule">
+      <HintPath>D:\Unity\2022.3.10f1\Editor\Data\Managed\UnityEngine\UnityEngine.GameCenterModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.GridModule">
+      <HintPath>D:\Unity\2022.3.10f1\Editor\Data\Managed\UnityEngine\UnityEngine.GridModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.HotReloadModule">
+      <HintPath>D:\Unity\2022.3.10f1\Editor\Data\Managed\UnityEngine\UnityEngine.HotReloadModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.IMGUIModule">
+      <HintPath>D:\Unity\2022.3.10f1\Editor\Data\Managed\UnityEngine\UnityEngine.IMGUIModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.ImageConversionModule">
+      <HintPath>D:\Unity\2022.3.10f1\Editor\Data\Managed\UnityEngine\UnityEngine.ImageConversionModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.InputModule">
+      <HintPath>D:\Unity\2022.3.10f1\Editor\Data\Managed\UnityEngine\UnityEngine.InputModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.InputLegacyModule">
+      <HintPath>D:\Unity\2022.3.10f1\Editor\Data\Managed\UnityEngine\UnityEngine.InputLegacyModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.JSONSerializeModule">
+      <HintPath>D:\Unity\2022.3.10f1\Editor\Data\Managed\UnityEngine\UnityEngine.JSONSerializeModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.LocalizationModule">
+      <HintPath>D:\Unity\2022.3.10f1\Editor\Data\Managed\UnityEngine\UnityEngine.LocalizationModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.ParticleSystemModule">
+      <HintPath>D:\Unity\2022.3.10f1\Editor\Data\Managed\UnityEngine\UnityEngine.ParticleSystemModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.PerformanceReportingModule">
+      <HintPath>D:\Unity\2022.3.10f1\Editor\Data\Managed\UnityEngine\UnityEngine.PerformanceReportingModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.PhysicsModule">
+      <HintPath>D:\Unity\2022.3.10f1\Editor\Data\Managed\UnityEngine\UnityEngine.PhysicsModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.Physics2DModule">
+      <HintPath>D:\Unity\2022.3.10f1\Editor\Data\Managed\UnityEngine\UnityEngine.Physics2DModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.ProfilerModule">
+      <HintPath>D:\Unity\2022.3.10f1\Editor\Data\Managed\UnityEngine\UnityEngine.ProfilerModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.PropertiesModule">
+      <HintPath>D:\Unity\2022.3.10f1\Editor\Data\Managed\UnityEngine\UnityEngine.PropertiesModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.RuntimeInitializeOnLoadManagerInitializerModule">
+      <HintPath>D:\Unity\2022.3.10f1\Editor\Data\Managed\UnityEngine\UnityEngine.RuntimeInitializeOnLoadManagerInitializerModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.ScreenCaptureModule">
+      <HintPath>D:\Unity\2022.3.10f1\Editor\Data\Managed\UnityEngine\UnityEngine.ScreenCaptureModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.SharedInternalsModule">
+      <HintPath>D:\Unity\2022.3.10f1\Editor\Data\Managed\UnityEngine\UnityEngine.SharedInternalsModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.SpriteMaskModule">
+      <HintPath>D:\Unity\2022.3.10f1\Editor\Data\Managed\UnityEngine\UnityEngine.SpriteMaskModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.SpriteShapeModule">
+      <HintPath>D:\Unity\2022.3.10f1\Editor\Data\Managed\UnityEngine\UnityEngine.SpriteShapeModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.StreamingModule">
+      <HintPath>D:\Unity\2022.3.10f1\Editor\Data\Managed\UnityEngine\UnityEngine.StreamingModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.SubstanceModule">
+      <HintPath>D:\Unity\2022.3.10f1\Editor\Data\Managed\UnityEngine\UnityEngine.SubstanceModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.SubsystemsModule">
+      <HintPath>D:\Unity\2022.3.10f1\Editor\Data\Managed\UnityEngine\UnityEngine.SubsystemsModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.TLSModule">
+      <HintPath>D:\Unity\2022.3.10f1\Editor\Data\Managed\UnityEngine\UnityEngine.TLSModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.TerrainModule">
+      <HintPath>D:\Unity\2022.3.10f1\Editor\Data\Managed\UnityEngine\UnityEngine.TerrainModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.TerrainPhysicsModule">
+      <HintPath>D:\Unity\2022.3.10f1\Editor\Data\Managed\UnityEngine\UnityEngine.TerrainPhysicsModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.TextCoreFontEngineModule">
+      <HintPath>D:\Unity\2022.3.10f1\Editor\Data\Managed\UnityEngine\UnityEngine.TextCoreFontEngineModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.TextCoreTextEngineModule">
+      <HintPath>D:\Unity\2022.3.10f1\Editor\Data\Managed\UnityEngine\UnityEngine.TextCoreTextEngineModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.TextRenderingModule">
+      <HintPath>D:\Unity\2022.3.10f1\Editor\Data\Managed\UnityEngine\UnityEngine.TextRenderingModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.TilemapModule">
+      <HintPath>D:\Unity\2022.3.10f1\Editor\Data\Managed\UnityEngine\UnityEngine.TilemapModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.UIModule">
+      <HintPath>D:\Unity\2022.3.10f1\Editor\Data\Managed\UnityEngine\UnityEngine.UIModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.UIElementsModule">
+      <HintPath>D:\Unity\2022.3.10f1\Editor\Data\Managed\UnityEngine\UnityEngine.UIElementsModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.UmbraModule">
+      <HintPath>D:\Unity\2022.3.10f1\Editor\Data\Managed\UnityEngine\UnityEngine.UmbraModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.UnityAnalyticsModule">
+      <HintPath>D:\Unity\2022.3.10f1\Editor\Data\Managed\UnityEngine\UnityEngine.UnityAnalyticsModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.UnityAnalyticsCommonModule">
+      <HintPath>D:\Unity\2022.3.10f1\Editor\Data\Managed\UnityEngine\UnityEngine.UnityAnalyticsCommonModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.UnityConnectModule">
+      <HintPath>D:\Unity\2022.3.10f1\Editor\Data\Managed\UnityEngine\UnityEngine.UnityConnectModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.UnityCurlModule">
+      <HintPath>D:\Unity\2022.3.10f1\Editor\Data\Managed\UnityEngine\UnityEngine.UnityCurlModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.UnityTestProtocolModule">
+      <HintPath>D:\Unity\2022.3.10f1\Editor\Data\Managed\UnityEngine\UnityEngine.UnityTestProtocolModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.UnityWebRequestModule">
+      <HintPath>D:\Unity\2022.3.10f1\Editor\Data\Managed\UnityEngine\UnityEngine.UnityWebRequestModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.UnityWebRequestAssetBundleModule">
+      <HintPath>D:\Unity\2022.3.10f1\Editor\Data\Managed\UnityEngine\UnityEngine.UnityWebRequestAssetBundleModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.UnityWebRequestAudioModule">
+      <HintPath>D:\Unity\2022.3.10f1\Editor\Data\Managed\UnityEngine\UnityEngine.UnityWebRequestAudioModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.UnityWebRequestTextureModule">
+      <HintPath>D:\Unity\2022.3.10f1\Editor\Data\Managed\UnityEngine\UnityEngine.UnityWebRequestTextureModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.UnityWebRequestWWWModule">
+      <HintPath>D:\Unity\2022.3.10f1\Editor\Data\Managed\UnityEngine\UnityEngine.UnityWebRequestWWWModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.VFXModule">
+      <HintPath>D:\Unity\2022.3.10f1\Editor\Data\Managed\UnityEngine\UnityEngine.VFXModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.VRModule">
+      <HintPath>D:\Unity\2022.3.10f1\Editor\Data\Managed\UnityEngine\UnityEngine.VRModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.VehiclesModule">
+      <HintPath>D:\Unity\2022.3.10f1\Editor\Data\Managed\UnityEngine\UnityEngine.VehiclesModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.VideoModule">
+      <HintPath>D:\Unity\2022.3.10f1\Editor\Data\Managed\UnityEngine\UnityEngine.VideoModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.VirtualTexturingModule">
+      <HintPath>D:\Unity\2022.3.10f1\Editor\Data\Managed\UnityEngine\UnityEngine.VirtualTexturingModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.WindModule">
+      <HintPath>D:\Unity\2022.3.10f1\Editor\Data\Managed\UnityEngine\UnityEngine.WindModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.XRModule">
+      <HintPath>D:\Unity\2022.3.10f1\Editor\Data\Managed\UnityEngine\UnityEngine.XRModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEditor">
+      <HintPath>D:\Unity\2022.3.10f1\Editor\Data\Managed\UnityEngine\UnityEditor.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEditor.CoreModule">
+      <HintPath>D:\Unity\2022.3.10f1\Editor\Data\Managed\UnityEngine\UnityEditor.CoreModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEditor.DeviceSimulatorModule">
+      <HintPath>D:\Unity\2022.3.10f1\Editor\Data\Managed\UnityEngine\UnityEditor.DeviceSimulatorModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEditor.DiagnosticsModule">
+      <HintPath>D:\Unity\2022.3.10f1\Editor\Data\Managed\UnityEngine\UnityEditor.DiagnosticsModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEditor.EditorToolbarModule">
+      <HintPath>D:\Unity\2022.3.10f1\Editor\Data\Managed\UnityEngine\UnityEditor.EditorToolbarModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEditor.GraphViewModule">
+      <HintPath>D:\Unity\2022.3.10f1\Editor\Data\Managed\UnityEngine\UnityEditor.GraphViewModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEditor.PresetsUIModule">
+      <HintPath>D:\Unity\2022.3.10f1\Editor\Data\Managed\UnityEngine\UnityEditor.PresetsUIModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEditor.QuickSearchModule">
+      <HintPath>D:\Unity\2022.3.10f1\Editor\Data\Managed\UnityEngine\UnityEditor.QuickSearchModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEditor.SceneTemplateModule">
+      <HintPath>D:\Unity\2022.3.10f1\Editor\Data\Managed\UnityEngine\UnityEditor.SceneTemplateModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEditor.SceneViewModule">
+      <HintPath>D:\Unity\2022.3.10f1\Editor\Data\Managed\UnityEngine\UnityEditor.SceneViewModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEditor.TextCoreFontEngineModule">
+      <HintPath>D:\Unity\2022.3.10f1\Editor\Data\Managed\UnityEngine\UnityEditor.TextCoreFontEngineModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEditor.TextCoreTextEngineModule">
+      <HintPath>D:\Unity\2022.3.10f1\Editor\Data\Managed\UnityEngine\UnityEditor.TextCoreTextEngineModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEditor.UIBuilderModule">
+      <HintPath>D:\Unity\2022.3.10f1\Editor\Data\Managed\UnityEngine\UnityEditor.UIBuilderModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEditor.UIElementsModule">
+      <HintPath>D:\Unity\2022.3.10f1\Editor\Data\Managed\UnityEngine\UnityEditor.UIElementsModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEditor.UIElementsSamplesModule">
+      <HintPath>D:\Unity\2022.3.10f1\Editor\Data\Managed\UnityEngine\UnityEditor.UIElementsSamplesModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEditor.UnityConnectModule">
+      <HintPath>D:\Unity\2022.3.10f1\Editor\Data\Managed\UnityEngine\UnityEditor.UnityConnectModule.dll</HintPath>
+    </Reference>
+    <Reference Include="ReportGeneratorMerged">
+      <HintPath>Library\PackageCache\com.unity.testtools.codecoverage@1.2.4\lib\ReportGenerator\ReportGeneratorMerged.dll</HintPath>
+    </Reference>
+    <Reference Include="Unity.VisualScripting.Antlr3.Runtime">
+      <HintPath>Library\PackageCache\com.unity.visualscripting@1.9.0\Runtime\VisualScripting.Flow\Dependencies\NCalc\Unity.VisualScripting.Antlr3.Runtime.dll</HintPath>
+    </Reference>
+    <Reference Include="netstandard">
+      <HintPath>D:\Unity\2022.3.10f1\Editor\Data\NetStandard\ref\2.1.0\netstandard.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Win32.Primitives">
+      <HintPath>D:\Unity\2022.3.10f1\Editor\Data\NetStandard\compat\2.1.0\shims\netstandard\Microsoft.Win32.Primitives.dll</HintPath>
+    </Reference>
+    <Reference Include="System.AppContext">
+      <HintPath>D:\Unity\2022.3.10f1\Editor\Data\NetStandard\compat\2.1.0\shims\netstandard\System.AppContext.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Buffers">
+      <HintPath>D:\Unity\2022.3.10f1\Editor\Data\NetStandard\compat\2.1.0\shims\netstandard\System.Buffers.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Collections.Concurrent">
+      <HintPath>D:\Unity\2022.3.10f1\Editor\Data\NetStandard\compat\2.1.0\shims\netstandard\System.Collections.Concurrent.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Collections">
+      <HintPath>D:\Unity\2022.3.10f1\Editor\Data\NetStandard\compat\2.1.0\shims\netstandard\System.Collections.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Collections.NonGeneric">
+      <HintPath>D:\Unity\2022.3.10f1\Editor\Data\NetStandard\compat\2.1.0\shims\netstandard\System.Collections.NonGeneric.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Collections.Specialized">
+      <HintPath>D:\Unity\2022.3.10f1\Editor\Data\NetStandard\compat\2.1.0\shims\netstandard\System.Collections.Specialized.dll</HintPath>
+    </Reference>
+    <Reference Include="System.ComponentModel">
+      <HintPath>D:\Unity\2022.3.10f1\Editor\Data\NetStandard\compat\2.1.0\shims\netstandard\System.ComponentModel.dll</HintPath>
+    </Reference>
+    <Reference Include="System.ComponentModel.EventBasedAsync">
+      <HintPath>D:\Unity\2022.3.10f1\Editor\Data\NetStandard\compat\2.1.0\shims\netstandard\System.ComponentModel.EventBasedAsync.dll</HintPath>
+    </Reference>
+    <Reference Include="System.ComponentModel.Primitives">
+      <HintPath>D:\Unity\2022.3.10f1\Editor\Data\NetStandard\compat\2.1.0\shims\netstandard\System.ComponentModel.Primitives.dll</HintPath>
+    </Reference>
+    <Reference Include="System.ComponentModel.TypeConverter">
+      <HintPath>D:\Unity\2022.3.10f1\Editor\Data\NetStandard\compat\2.1.0\shims\netstandard\System.ComponentModel.TypeConverter.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Console">
+      <HintPath>D:\Unity\2022.3.10f1\Editor\Data\NetStandard\compat\2.1.0\shims\netstandard\System.Console.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Data.Common">
+      <HintPath>D:\Unity\2022.3.10f1\Editor\Data\NetStandard\compat\2.1.0\shims\netstandard\System.Data.Common.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Diagnostics.Contracts">
+      <HintPath>D:\Unity\2022.3.10f1\Editor\Data\NetStandard\compat\2.1.0\shims\netstandard\System.Diagnostics.Contracts.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Diagnostics.Debug">
+      <HintPath>D:\Unity\2022.3.10f1\Editor\Data\NetStandard\compat\2.1.0\shims\netstandard\System.Diagnostics.Debug.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Diagnostics.FileVersionInfo">
+      <HintPath>D:\Unity\2022.3.10f1\Editor\Data\NetStandard\compat\2.1.0\shims\netstandard\System.Diagnostics.FileVersionInfo.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Diagnostics.Process">
+      <HintPath>D:\Unity\2022.3.10f1\Editor\Data\NetStandard\compat\2.1.0\shims\netstandard\System.Diagnostics.Process.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Diagnostics.StackTrace">
+      <HintPath>D:\Unity\2022.3.10f1\Editor\Data\NetStandard\compat\2.1.0\shims\netstandard\System.Diagnostics.StackTrace.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Diagnostics.TextWriterTraceListener">
+      <HintPath>D:\Unity\2022.3.10f1\Editor\Data\NetStandard\compat\2.1.0\shims\netstandard\System.Diagnostics.TextWriterTraceListener.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Diagnostics.Tools">
+      <HintPath>D:\Unity\2022.3.10f1\Editor\Data\NetStandard\compat\2.1.0\shims\netstandard\System.Diagnostics.Tools.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Diagnostics.TraceSource">
+      <HintPath>D:\Unity\2022.3.10f1\Editor\Data\NetStandard\compat\2.1.0\shims\netstandard\System.Diagnostics.TraceSource.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Diagnostics.Tracing">
+      <HintPath>D:\Unity\2022.3.10f1\Editor\Data\NetStandard\compat\2.1.0\shims\netstandard\System.Diagnostics.Tracing.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Drawing.Primitives">
+      <HintPath>D:\Unity\2022.3.10f1\Editor\Data\NetStandard\compat\2.1.0\shims\netstandard\System.Drawing.Primitives.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Dynamic.Runtime">
+      <HintPath>D:\Unity\2022.3.10f1\Editor\Data\NetStandard\compat\2.1.0\shims\netstandard\System.Dynamic.Runtime.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Globalization.Calendars">
+      <HintPath>D:\Unity\2022.3.10f1\Editor\Data\NetStandard\compat\2.1.0\shims\netstandard\System.Globalization.Calendars.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Globalization">
+      <HintPath>D:\Unity\2022.3.10f1\Editor\Data\NetStandard\compat\2.1.0\shims\netstandard\System.Globalization.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Globalization.Extensions">
+      <HintPath>D:\Unity\2022.3.10f1\Editor\Data\NetStandard\compat\2.1.0\shims\netstandard\System.Globalization.Extensions.dll</HintPath>
+    </Reference>
+    <Reference Include="System.IO.Compression">
+      <HintPath>D:\Unity\2022.3.10f1\Editor\Data\NetStandard\compat\2.1.0\shims\netstandard\System.IO.Compression.dll</HintPath>
+    </Reference>
+    <Reference Include="System.IO.Compression.ZipFile">
+      <HintPath>D:\Unity\2022.3.10f1\Editor\Data\NetStandard\compat\2.1.0\shims\netstandard\System.IO.Compression.ZipFile.dll</HintPath>
+    </Reference>
+    <Reference Include="System.IO">
+      <HintPath>D:\Unity\2022.3.10f1\Editor\Data\NetStandard\compat\2.1.0\shims\netstandard\System.IO.dll</HintPath>
+    </Reference>
+    <Reference Include="System.IO.FileSystem">
+      <HintPath>D:\Unity\2022.3.10f1\Editor\Data\NetStandard\compat\2.1.0\shims\netstandard\System.IO.FileSystem.dll</HintPath>
+    </Reference>
+    <Reference Include="System.IO.FileSystem.DriveInfo">
+      <HintPath>D:\Unity\2022.3.10f1\Editor\Data\NetStandard\compat\2.1.0\shims\netstandard\System.IO.FileSystem.DriveInfo.dll</HintPath>
+    </Reference>
+    <Reference Include="System.IO.FileSystem.Primitives">
+      <HintPath>D:\Unity\2022.3.10f1\Editor\Data\NetStandard\compat\2.1.0\shims\netstandard\System.IO.FileSystem.Primitives.dll</HintPath>
+    </Reference>
+    <Reference Include="System.IO.FileSystem.Watcher">
+      <HintPath>D:\Unity\2022.3.10f1\Editor\Data\NetStandard\compat\2.1.0\shims\netstandard\System.IO.FileSystem.Watcher.dll</HintPath>
+    </Reference>
+    <Reference Include="System.IO.IsolatedStorage">
+      <HintPath>D:\Unity\2022.3.10f1\Editor\Data\NetStandard\compat\2.1.0\shims\netstandard\System.IO.IsolatedStorage.dll</HintPath>
+    </Reference>
+    <Reference Include="System.IO.MemoryMappedFiles">
+      <HintPath>D:\Unity\2022.3.10f1\Editor\Data\NetStandard\compat\2.1.0\shims\netstandard\System.IO.MemoryMappedFiles.dll</HintPath>
+    </Reference>
+    <Reference Include="System.IO.Pipes">
+      <HintPath>D:\Unity\2022.3.10f1\Editor\Data\NetStandard\compat\2.1.0\shims\netstandard\System.IO.Pipes.dll</HintPath>
+    </Reference>
+    <Reference Include="System.IO.UnmanagedMemoryStream">
+      <HintPath>D:\Unity\2022.3.10f1\Editor\Data\NetStandard\compat\2.1.0\shims\netstandard\System.IO.UnmanagedMemoryStream.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Linq">
+      <HintPath>D:\Unity\2022.3.10f1\Editor\Data\NetStandard\compat\2.1.0\shims\netstandard\System.Linq.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Linq.Expressions">
+      <HintPath>D:\Unity\2022.3.10f1\Editor\Data\NetStandard\compat\2.1.0\shims\netstandard\System.Linq.Expressions.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Linq.Parallel">
+      <HintPath>D:\Unity\2022.3.10f1\Editor\Data\NetStandard\compat\2.1.0\shims\netstandard\System.Linq.Parallel.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Linq.Queryable">
+      <HintPath>D:\Unity\2022.3.10f1\Editor\Data\NetStandard\compat\2.1.0\shims\netstandard\System.Linq.Queryable.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Memory">
+      <HintPath>D:\Unity\2022.3.10f1\Editor\Data\NetStandard\compat\2.1.0\shims\netstandard\System.Memory.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Net.Http">
+      <HintPath>D:\Unity\2022.3.10f1\Editor\Data\NetStandard\compat\2.1.0\shims\netstandard\System.Net.Http.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Net.NameResolution">
+      <HintPath>D:\Unity\2022.3.10f1\Editor\Data\NetStandard\compat\2.1.0\shims\netstandard\System.Net.NameResolution.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Net.NetworkInformation">
+      <HintPath>D:\Unity\2022.3.10f1\Editor\Data\NetStandard\compat\2.1.0\shims\netstandard\System.Net.NetworkInformation.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Net.Ping">
+      <HintPath>D:\Unity\2022.3.10f1\Editor\Data\NetStandard\compat\2.1.0\shims\netstandard\System.Net.Ping.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Net.Primitives">
+      <HintPath>D:\Unity\2022.3.10f1\Editor\Data\NetStandard\compat\2.1.0\shims\netstandard\System.Net.Primitives.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Net.Requests">
+      <HintPath>D:\Unity\2022.3.10f1\Editor\Data\NetStandard\compat\2.1.0\shims\netstandard\System.Net.Requests.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Net.Security">
+      <HintPath>D:\Unity\2022.3.10f1\Editor\Data\NetStandard\compat\2.1.0\shims\netstandard\System.Net.Security.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Net.Sockets">
+      <HintPath>D:\Unity\2022.3.10f1\Editor\Data\NetStandard\compat\2.1.0\shims\netstandard\System.Net.Sockets.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Net.WebHeaderCollection">
+      <HintPath>D:\Unity\2022.3.10f1\Editor\Data\NetStandard\compat\2.1.0\shims\netstandard\System.Net.WebHeaderCollection.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Net.WebSockets.Client">
+      <HintPath>D:\Unity\2022.3.10f1\Editor\Data\NetStandard\compat\2.1.0\shims\netstandard\System.Net.WebSockets.Client.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Net.WebSockets">
+      <HintPath>D:\Unity\2022.3.10f1\Editor\Data\NetStandard\compat\2.1.0\shims\netstandard\System.Net.WebSockets.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Numerics.Vectors">
+      <HintPath>D:\Unity\2022.3.10f1\Editor\Data\NetStandard\compat\2.1.0\shims\netstandard\System.Numerics.Vectors.dll</HintPath>
+    </Reference>
+    <Reference Include="System.ObjectModel">
+      <HintPath>D:\Unity\2022.3.10f1\Editor\Data\NetStandard\compat\2.1.0\shims\netstandard\System.ObjectModel.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Reflection.DispatchProxy">
+      <HintPath>D:\Unity\2022.3.10f1\Editor\Data\NetStandard\compat\2.1.0\shims\netstandard\System.Reflection.DispatchProxy.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Reflection">
+      <HintPath>D:\Unity\2022.3.10f1\Editor\Data\NetStandard\compat\2.1.0\shims\netstandard\System.Reflection.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Reflection.Emit">
+      <HintPath>D:\Unity\2022.3.10f1\Editor\Data\NetStandard\compat\2.1.0\shims\netstandard\System.Reflection.Emit.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Reflection.Emit.ILGeneration">
+      <HintPath>D:\Unity\2022.3.10f1\Editor\Data\NetStandard\compat\2.1.0\shims\netstandard\System.Reflection.Emit.ILGeneration.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Reflection.Emit.Lightweight">
+      <HintPath>D:\Unity\2022.3.10f1\Editor\Data\NetStandard\compat\2.1.0\shims\netstandard\System.Reflection.Emit.Lightweight.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Reflection.Extensions">
+      <HintPath>D:\Unity\2022.3.10f1\Editor\Data\NetStandard\compat\2.1.0\shims\netstandard\System.Reflection.Extensions.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Reflection.Primitives">
+      <HintPath>D:\Unity\2022.3.10f1\Editor\Data\NetStandard\compat\2.1.0\shims\netstandard\System.Reflection.Primitives.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Resources.Reader">
+      <HintPath>D:\Unity\2022.3.10f1\Editor\Data\NetStandard\compat\2.1.0\shims\netstandard\System.Resources.Reader.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Resources.ResourceManager">
+      <HintPath>D:\Unity\2022.3.10f1\Editor\Data\NetStandard\compat\2.1.0\shims\netstandard\System.Resources.ResourceManager.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Resources.Writer">
+      <HintPath>D:\Unity\2022.3.10f1\Editor\Data\NetStandard\compat\2.1.0\shims\netstandard\System.Resources.Writer.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Runtime.CompilerServices.VisualC">
+      <HintPath>D:\Unity\2022.3.10f1\Editor\Data\NetStandard\compat\2.1.0\shims\netstandard\System.Runtime.CompilerServices.VisualC.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Runtime">
+      <HintPath>D:\Unity\2022.3.10f1\Editor\Data\NetStandard\compat\2.1.0\shims\netstandard\System.Runtime.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Runtime.Extensions">
+      <HintPath>D:\Unity\2022.3.10f1\Editor\Data\NetStandard\compat\2.1.0\shims\netstandard\System.Runtime.Extensions.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Runtime.Handles">
+      <HintPath>D:\Unity\2022.3.10f1\Editor\Data\NetStandard\compat\2.1.0\shims\netstandard\System.Runtime.Handles.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Runtime.InteropServices">
+      <HintPath>D:\Unity\2022.3.10f1\Editor\Data\NetStandard\compat\2.1.0\shims\netstandard\System.Runtime.InteropServices.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Runtime.InteropServices.RuntimeInformation">
+      <HintPath>D:\Unity\2022.3.10f1\Editor\Data\NetStandard\compat\2.1.0\shims\netstandard\System.Runtime.InteropServices.RuntimeInformation.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Runtime.Numerics">
+      <HintPath>D:\Unity\2022.3.10f1\Editor\Data\NetStandard\compat\2.1.0\shims\netstandard\System.Runtime.Numerics.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Runtime.Serialization.Formatters">
+      <HintPath>D:\Unity\2022.3.10f1\Editor\Data\NetStandard\compat\2.1.0\shims\netstandard\System.Runtime.Serialization.Formatters.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Runtime.Serialization.Json">
+      <HintPath>D:\Unity\2022.3.10f1\Editor\Data\NetStandard\compat\2.1.0\shims\netstandard\System.Runtime.Serialization.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Runtime.Serialization.Primitives">
+      <HintPath>D:\Unity\2022.3.10f1\Editor\Data\NetStandard\compat\2.1.0\shims\netstandard\System.Runtime.Serialization.Primitives.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Runtime.Serialization.Xml">
+      <HintPath>D:\Unity\2022.3.10f1\Editor\Data\NetStandard\compat\2.1.0\shims\netstandard\System.Runtime.Serialization.Xml.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Security.Claims">
+      <HintPath>D:\Unity\2022.3.10f1\Editor\Data\NetStandard\compat\2.1.0\shims\netstandard\System.Security.Claims.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Security.Cryptography.Algorithms">
+      <HintPath>D:\Unity\2022.3.10f1\Editor\Data\NetStandard\compat\2.1.0\shims\netstandard\System.Security.Cryptography.Algorithms.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Security.Cryptography.Csp">
+      <HintPath>D:\Unity\2022.3.10f1\Editor\Data\NetStandard\compat\2.1.0\shims\netstandard\System.Security.Cryptography.Csp.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Security.Cryptography.Encoding">
+      <HintPath>D:\Unity\2022.3.10f1\Editor\Data\NetStandard\compat\2.1.0\shims\netstandard\System.Security.Cryptography.Encoding.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Security.Cryptography.Primitives">
+      <HintPath>D:\Unity\2022.3.10f1\Editor\Data\NetStandard\compat\2.1.0\shims\netstandard\System.Security.Cryptography.Primitives.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Security.Cryptography.X509Certificates">
+      <HintPath>D:\Unity\2022.3.10f1\Editor\Data\NetStandard\compat\2.1.0\shims\netstandard\System.Security.Cryptography.X509Certificates.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Security.Principal">
+      <HintPath>D:\Unity\2022.3.10f1\Editor\Data\NetStandard\compat\2.1.0\shims\netstandard\System.Security.Principal.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Security.SecureString">
+      <HintPath>D:\Unity\2022.3.10f1\Editor\Data\NetStandard\compat\2.1.0\shims\netstandard\System.Security.SecureString.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Text.Encoding">
+      <HintPath>D:\Unity\2022.3.10f1\Editor\Data\NetStandard\compat\2.1.0\shims\netstandard\System.Text.Encoding.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Text.Encoding.Extensions">
+      <HintPath>D:\Unity\2022.3.10f1\Editor\Data\NetStandard\compat\2.1.0\shims\netstandard\System.Text.Encoding.Extensions.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Text.RegularExpressions">
+      <HintPath>D:\Unity\2022.3.10f1\Editor\Data\NetStandard\compat\2.1.0\shims\netstandard\System.Text.RegularExpressions.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Threading">
+      <HintPath>D:\Unity\2022.3.10f1\Editor\Data\NetStandard\compat\2.1.0\shims\netstandard\System.Threading.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Threading.Overlapped">
+      <HintPath>D:\Unity\2022.3.10f1\Editor\Data\NetStandard\compat\2.1.0\shims\netstandard\System.Threading.Overlapped.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Threading.Tasks">
+      <HintPath>D:\Unity\2022.3.10f1\Editor\Data\NetStandard\compat\2.1.0\shims\netstandard\System.Threading.Tasks.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Threading.Tasks.Extensions">
+      <HintPath>D:\Unity\2022.3.10f1\Editor\Data\NetStandard\compat\2.1.0\shims\netstandard\System.Threading.Tasks.Extensions.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Threading.Tasks.Parallel">
+      <HintPath>D:\Unity\2022.3.10f1\Editor\Data\NetStandard\compat\2.1.0\shims\netstandard\System.Threading.Tasks.Parallel.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Threading.Thread">
+      <HintPath>D:\Unity\2022.3.10f1\Editor\Data\NetStandard\compat\2.1.0\shims\netstandard\System.Threading.Thread.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Threading.ThreadPool">
+      <HintPath>D:\Unity\2022.3.10f1\Editor\Data\NetStandard\compat\2.1.0\shims\netstandard\System.Threading.ThreadPool.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Threading.Timer">
+      <HintPath>D:\Unity\2022.3.10f1\Editor\Data\NetStandard\compat\2.1.0\shims\netstandard\System.Threading.Timer.dll</HintPath>
+    </Reference>
+    <Reference Include="System.ValueTuple">
+      <HintPath>D:\Unity\2022.3.10f1\Editor\Data\NetStandard\compat\2.1.0\shims\netstandard\System.ValueTuple.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Xml.ReaderWriter">
+      <HintPath>D:\Unity\2022.3.10f1\Editor\Data\NetStandard\compat\2.1.0\shims\netstandard\System.Xml.ReaderWriter.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Xml.XDocument">
+      <HintPath>D:\Unity\2022.3.10f1\Editor\Data\NetStandard\compat\2.1.0\shims\netstandard\System.Xml.XDocument.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Xml.XmlDocument">
+      <HintPath>D:\Unity\2022.3.10f1\Editor\Data\NetStandard\compat\2.1.0\shims\netstandard\System.Xml.XmlDocument.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Xml.XmlSerializer">
+      <HintPath>D:\Unity\2022.3.10f1\Editor\Data\NetStandard\compat\2.1.0\shims\netstandard\System.Xml.XmlSerializer.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Xml.XPath">
+      <HintPath>D:\Unity\2022.3.10f1\Editor\Data\NetStandard\compat\2.1.0\shims\netstandard\System.Xml.XPath.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Xml.XPath.XDocument">
+      <HintPath>D:\Unity\2022.3.10f1\Editor\Data\NetStandard\compat\2.1.0\shims\netstandard\System.Xml.XPath.XDocument.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Runtime.InteropServices.WindowsRuntime">
+      <HintPath>D:\Unity\2022.3.10f1\Editor\Data\NetStandard\Extensions\2.0.0\System.Runtime.InteropServices.WindowsRuntime.dll</HintPath>
+    </Reference>
+    <Reference Include="mscorlib">
+      <HintPath>D:\Unity\2022.3.10f1\Editor\Data\NetStandard\compat\2.1.0\shims\netfx\mscorlib.dll</HintPath>
+    </Reference>
+    <Reference Include="System.ComponentModel.Composition">
+      <HintPath>D:\Unity\2022.3.10f1\Editor\Data\NetStandard\compat\2.1.0\shims\netfx\System.ComponentModel.Composition.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Core">
+      <HintPath>D:\Unity\2022.3.10f1\Editor\Data\NetStandard\compat\2.1.0\shims\netfx\System.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Data">
+      <HintPath>D:\Unity\2022.3.10f1\Editor\Data\NetStandard\compat\2.1.0\shims\netfx\System.Data.dll</HintPath>
+    </Reference>
+    <Reference Include="System">
+      <HintPath>D:\Unity\2022.3.10f1\Editor\Data\NetStandard\compat\2.1.0\shims\netfx\System.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Drawing">
+      <HintPath>D:\Unity\2022.3.10f1\Editor\Data\NetStandard\compat\2.1.0\shims\netfx\System.Drawing.dll</HintPath>
+    </Reference>
+    <Reference Include="System.IO.Compression.FileSystem">
+      <HintPath>D:\Unity\2022.3.10f1\Editor\Data\NetStandard\compat\2.1.0\shims\netfx\System.IO.Compression.FileSystem.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Net">
+      <HintPath>D:\Unity\2022.3.10f1\Editor\Data\NetStandard\compat\2.1.0\shims\netfx\System.Net.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Numerics">
+      <HintPath>D:\Unity\2022.3.10f1\Editor\Data\NetStandard\compat\2.1.0\shims\netfx\System.Numerics.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Runtime.Serialization">
+      <HintPath>D:\Unity\2022.3.10f1\Editor\Data\NetStandard\compat\2.1.0\shims\netfx\System.Runtime.Serialization.dll</HintPath>
+    </Reference>
+    <Reference Include="System.ServiceModel.Web">
+      <HintPath>D:\Unity\2022.3.10f1\Editor\Data\NetStandard\compat\2.1.0\shims\netfx\System.ServiceModel.Web.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Transactions">
+      <HintPath>D:\Unity\2022.3.10f1\Editor\Data\NetStandard\compat\2.1.0\shims\netfx\System.Transactions.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web">
+      <HintPath>D:\Unity\2022.3.10f1\Editor\Data\NetStandard\compat\2.1.0\shims\netfx\System.Web.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Windows">
+      <HintPath>D:\Unity\2022.3.10f1\Editor\Data\NetStandard\compat\2.1.0\shims\netfx\System.Windows.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Xml">
+      <HintPath>D:\Unity\2022.3.10f1\Editor\Data\NetStandard\compat\2.1.0\shims\netfx\System.Xml.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Xml.Linq">
+      <HintPath>D:\Unity\2022.3.10f1\Editor\Data\NetStandard\compat\2.1.0\shims\netfx\System.Xml.Linq.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Xml.Serialization">
+      <HintPath>D:\Unity\2022.3.10f1\Editor\Data\NetStandard\compat\2.1.0\shims\netfx\System.Xml.Serialization.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEditor.UI">
+      <HintPath>Library\ScriptAssemblies\UnityEditor.UI.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.UI">
+      <HintPath>Library\ScriptAssemblies\UnityEngine.UI.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <Target Name="GenerateTargetFrameworkMonikerAttribute" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it.
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
