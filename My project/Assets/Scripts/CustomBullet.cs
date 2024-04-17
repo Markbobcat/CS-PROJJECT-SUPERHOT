@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class CustoomBullet : MonoBehaviour
+public class CustomBullet : MonoBehaviour
 {
     //Assignables
     public Rigidbody rb;

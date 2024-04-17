@@ -24,6 +24,9 @@ public class TimerController : MonoBehaviour
     public bool hasLimit;
     public float timerLimit;
 
+
+
+
     void Start()
     {
     
@@ -33,6 +36,8 @@ public class TimerController : MonoBehaviour
 
         currentTime = 0;
         SetTimerText();
+
+        // DontDestroyOnLoad(gameObject);
     }
 
     void Update()
